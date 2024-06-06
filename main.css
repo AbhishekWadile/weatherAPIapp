@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body{
+    margin: 0;
+    font-family: Poppins,sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #97d5ee;
+}
+.main{
+    background-color: #7bccec;
+    height: 58vh;
+    width: 46%;
+    margin-top: 15vh;
+    /* border: 2px solid red; */
+    border-radius: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(weather_img-removebg-preview.png);
+}
+.main_containt{
+    width: 70%;
+    height: 50vh;
+    /* border: 2px solid black; */
+    
+}
+.main_containt h1{
+    font-size: 6vh;
+    color: white;
+    animation: fade-up 1s;
+}
+.main_containt form{
+    position: relative;
+    left:3vh;
+    animation: fade-down 1s;
+}
+.main .main_containt form label{
+    font-size: 2.5vh;
+}
+.main_containt form #text{
+    background-color: #7bccec;
+    border-radius: 3vh;
+    border: 2px solid white;
+}
+.main_containt form #submit{
+    border-radius: 3vh;
+    font-size: 2vh;
+    background-color: white;
+    color: black;
+    border: none;
+    width: 14%;
+    font-family: Poppins,sans-serif;
+    height: 3.5vh;
+}
+.main_containt form #submit:hover{
+    cursor: pointer;
+}
+.display div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    /* margin: 0; */
+    margin-top: 1%;
+    height: 11vh;
+}
+.display h4{
+    color: white;
+    font-size: 5vh;
+}
+.display h4 #name{
+    animation: fade-up 0.6s;
+}
+.display h4 #temp{
+    animation: fade-up 1.2s;
+}
+@keyframes fade-down {
+    0%{
+        opacity: 0;
+        transform: translateY(-30px) scale(0.9);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+}
+
+@keyframes fade-up {
+    0%{
+        opacity: 0;
+        transform: translateY(30px) scale(0.9);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+}
+@media screen and (max-width:400px){
+    .main{
+        height: 78vh;
+        width: 90%;
+    }
+    #submit{
+        width: 100%;
+        height: 30vh;
+        font-size: 20%;
+    }
+}
